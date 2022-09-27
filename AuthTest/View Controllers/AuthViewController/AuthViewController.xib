@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="AuthTest" customModuleProvider="target">
+            <connections>
+                <outlet property="authButton" destination="zAE-u8-FoZ" id="yLa-9H-DzJ"/>
+                <outlet property="authButtonBottomConstraint" destination="PYR-54-Oqm" id="EP5-I3-MW8"/>
+                <outlet property="loginTextField" destination="OMZ-1z-j83" id="bUP-Hv-zVh"/>
+                <outlet property="passwordTextField" destination="oe4-iq-P9V" id="qXl-83-xf3"/>
+                <outlet property="view" destination="b8T-lR-RBk" id="1MT-gC-5T9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="b8T-lR-RBk">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqZ-oU-ab4">
+                    <rect key="frame" x="63" y="162" width="288" height="124"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt7-kD-Gxt">
+                            <rect key="frame" x="79" y="0.0" width="130" height="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMZ-1z-j83">
+                            <rect key="frame" x="0.0" y="40" width="288" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                            <connections>
+                                <action selector="loginTextFieldChangedAction:" destination="-1" eventType="editingChanged" id="s7s-4V-Cn0"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe4-iq-P9V">
+                            <rect key="frame" x="0.0" y="90" width="288" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <action selector="passwordTextFieldChangedAction:" destination="-1" eventType="editingChanged" id="bmL-in-L2C"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OMZ-1z-j83" secondAttribute="trailing" id="2Uh-TE-yiR"/>
+                        <constraint firstItem="OMZ-1z-j83" firstAttribute="leading" secondItem="jqZ-oU-ab4" secondAttribute="leading" id="3Do-KC-CHb"/>
+                        <constraint firstItem="rt7-kD-Gxt" firstAttribute="centerX" secondItem="jqZ-oU-ab4" secondAttribute="centerX" id="5Hw-Ds-8s0"/>
+                        <constraint firstAttribute="bottom" secondItem="oe4-iq-P9V" secondAttribute="bottom" id="73t-Uy-iW6"/>
+                        <constraint firstItem="oe4-iq-P9V" firstAttribute="leading" secondItem="jqZ-oU-ab4" secondAttribute="leading" id="Pgg-EA-jdM"/>
+                        <constraint firstItem="rt7-kD-Gxt" firstAttribute="top" secondItem="jqZ-oU-ab4" secondAttribute="top" id="dfh-up-yia"/>
+                        <constraint firstAttribute="trailing" secondItem="oe4-iq-P9V" secondAttribute="trailing" id="fkv-VE-DEv"/>
+                        <constraint firstAttribute="width" constant="288" id="gTy-gv-xT2"/>
+                        <constraint firstItem="OMZ-1z-j83" firstAttribute="top" secondItem="rt7-kD-Gxt" secondAttribute="bottom" constant="16" id="qB2-ag-d8b"/>
+                        <constraint firstItem="oe4-iq-P9V" firstAttribute="top" secondItem="OMZ-1z-j83" secondAttribute="bottom" constant="16" id="vz0-oS-Kwq"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAE-u8-FoZ">
+                    <rect key="frame" x="82" y="786" width="250" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="veq-Mf-Ydr"/>
+                        <constraint firstAttribute="height" constant="44" id="xKv-g0-30x"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Вход" backgroundImage="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="authButtonAction:" destination="-1" eventType="touchUpInside" id="9iy-39-Ip4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="071-AI-Qle"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jqZ-oU-ab4" firstAttribute="centerX" secondItem="b8T-lR-RBk" secondAttribute="centerX" id="6e8-Nz-Vgz"/>
+                <constraint firstItem="071-AI-Qle" firstAttribute="bottom" secondItem="zAE-u8-FoZ" secondAttribute="bottom" constant="32" id="PYR-54-Oqm"/>
+                <constraint firstItem="jqZ-oU-ab4" firstAttribute="centerY" secondItem="b8T-lR-RBk" secondAttribute="centerY" multiplier="0.5" id="RvY-qv-AEr"/>
+                <constraint firstItem="zAE-u8-FoZ" firstAttribute="centerX" secondItem="b8T-lR-RBk" secondAttribute="centerX" id="oDy-W4-Y1r"/>
+            </constraints>
+            <point key="canvasLocation" x="836" y="85"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button" width="16.333333969116211" height="16.333333969116211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
