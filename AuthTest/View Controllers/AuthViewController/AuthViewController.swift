@@ -72,6 +72,7 @@ class AuthViewController: UIViewController {
     private func showErrorAlert(_ error: Error) {
         UIAlertController.presentErrorAlert(
             error,
+            title: "Ошибка авторизации",
             retryHandler: nil,
             closeHandler: {
                 self.loaderVC?.dismiss(animated: true, completion: nil)
@@ -98,10 +99,11 @@ class AuthViewController: UIViewController {
     }
     
     private func presentUserInfo() {
-        let userInfoVC = UserInfoViewController()
-        userInfoVC.modalTransitionStyle = .crossDissolve
-        userInfoVC.modalPresentationStyle = .fullScreen
-        UIViewController.topViewController()?.present(userInfoVC, animated: true, completion: nil)
+        let navController = UINavigationController()
+        navController.modalTransitionStyle = .crossDissolve
+        navController.modalPresentationStyle = .fullScreen
+        navController.viewControllers = [UserInfoViewController()]
+        UIViewController.topViewController()?.present(navController, animated: true, completion: nil)
     }
     
 }

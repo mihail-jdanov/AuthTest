@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoViewController" customModule="AuthTest" customModuleProvider="target">
             <connections>
+                <outlet property="emailLabel" destination="sXw-cs-kC6" id="S3O-Yr-1p5"/>
+                <outlet property="permissionsLabel" destination="Viu-eZ-lhO" id="7AJ-cE-e3k"/>
+                <outlet property="roleIdLabel" destination="26p-hW-v0z" id="cQo-b7-pIy"/>
+                <outlet property="tableView" destination="iPg-de-NZi" id="8oM-RN-yr4"/>
+                <outlet property="usernameLabel" destination="awp-ck-oTp" id="XiC-Ba-H1B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,9 +23,81 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxh-hT-7Vn">
+                    <rect key="frame" x="16" y="60" width="382" height="93.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roleId:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26p-hW-v0z">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awp-ck-oTp">
+                            <rect key="frame" x="0.0" y="36.5" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXw-cs-kC6">
+                            <rect key="frame" x="0.0" y="73" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="26p-hW-v0z" firstAttribute="top" secondItem="Cxh-hT-7Vn" secondAttribute="top" id="3h2-3l-5WY"/>
+                        <constraint firstAttribute="bottom" secondItem="sXw-cs-kC6" secondAttribute="bottom" id="5tj-ns-KSl"/>
+                        <constraint firstItem="awp-ck-oTp" firstAttribute="leading" secondItem="Cxh-hT-7Vn" secondAttribute="leading" id="Byo-BL-2Fl"/>
+                        <constraint firstItem="sXw-cs-kC6" firstAttribute="top" secondItem="awp-ck-oTp" secondAttribute="bottom" constant="16" id="D2y-Eg-Lh2"/>
+                        <constraint firstAttribute="trailing" secondItem="sXw-cs-kC6" secondAttribute="trailing" id="DWz-xA-RLL"/>
+                        <constraint firstItem="sXw-cs-kC6" firstAttribute="leading" secondItem="Cxh-hT-7Vn" secondAttribute="leading" id="LXj-8v-gip"/>
+                        <constraint firstAttribute="trailing" secondItem="26p-hW-v0z" secondAttribute="trailing" id="OS3-OC-Cs8"/>
+                        <constraint firstAttribute="trailing" secondItem="awp-ck-oTp" secondAttribute="trailing" id="ejj-Kd-nSq"/>
+                        <constraint firstItem="awp-ck-oTp" firstAttribute="top" secondItem="26p-hW-v0z" secondAttribute="bottom" constant="16" id="f8S-kj-njC"/>
+                        <constraint firstItem="26p-hW-v0z" firstAttribute="leading" secondItem="Cxh-hT-7Vn" secondAttribute="leading" id="rjg-GN-iyf"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Права доступа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viu-eZ-lhO">
+                    <rect key="frame" x="16" y="185.5" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-de-NZi">
+                    <rect key="frame" x="0.0" y="222" width="414" height="674"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="139" y="85"/>
+            <constraints>
+                <constraint firstItem="Viu-eZ-lhO" firstAttribute="top" secondItem="Cxh-hT-7Vn" secondAttribute="bottom" constant="32" id="A1l-Lo-sQA"/>
+                <constraint firstItem="Cxh-hT-7Vn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ack-WP-89S"/>
+                <constraint firstItem="Cxh-hT-7Vn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="CPc-U8-VpV"/>
+                <constraint firstItem="iPg-de-NZi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K94-WK-dhS"/>
+                <constraint firstItem="Viu-eZ-lhO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="L1O-As-tME"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cxh-hT-7Vn" secondAttribute="trailing" constant="16" id="UWy-k6-9rv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Viu-eZ-lhO" secondAttribute="trailing" constant="16" id="WZg-MD-eXB"/>
+                <constraint firstAttribute="bottom" secondItem="iPg-de-NZi" secondAttribute="bottom" id="gO5-hG-rbI"/>
+                <constraint firstItem="iPg-de-NZi" firstAttribute="top" secondItem="Viu-eZ-lhO" secondAttribute="bottom" constant="16" id="gYj-ZD-wwe"/>
+                <constraint firstAttribute="trailing" secondItem="iPg-de-NZi" secondAttribute="trailing" id="iAb-ny-mcq"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="84.375"/>
         </view>
     </objects>
     <resources>

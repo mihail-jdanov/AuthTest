@@ -9,9 +9,9 @@ import UIKit
 
 extension UIAlertController {
     
-    static func presentErrorAlert(_ error: Error, retryHandler: (() -> Void)?, closeHandler: (() -> Void)?) {
+    static func presentErrorAlert(_ error: Error, title: String, retryHandler: (() -> Void)?, closeHandler: (() -> Void)?) {
         let alertController = UIAlertController(
-            title: "Ошибка",
+            title: title,
             message: error.localizedDescription,
             preferredStyle: .alert
         )

@@ -14,13 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: windowScene)
-//        KeychainHelper.shared.delete(service: .defaultKeychainService, account: .defaultKeychainAccount)
         if let _ = KeychainHelper.shared.read(
             service: .defaultKeychainService,
             account: .defaultKeychainAccount,
             type: AuthData.self
         ) {
-            window.rootViewController = UserInfoViewController()
+            let navController = UINavigationController()
+            navController.viewControllers = [UserInfoViewController()]
+            window.rootViewController = navController
         } else {
             window.rootViewController = AuthViewController()
         }
